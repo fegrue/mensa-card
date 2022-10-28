@@ -10,7 +10,7 @@ def show():
         b = getbalance()    
     except:
           writefile(input("Enter your cardnumber: "))
-    print(f"Dein Guthaben beträgt {getbalance/100}€")
+    print(f"Dein Guthaben beträgt {getbalance()/100}€")
     print("Press 'c' to change your cardnumber or any other key to exit")
     k = readchar.readchar()
     if k == "c":
@@ -38,6 +38,6 @@ def writefile(number):
 def file_is_empty(path):
     return os.stat(path).st_size==0
 
-file = open("./buf.txt", "r")
+file = open("./buf.txt", "w")
 file.close()
 show()
